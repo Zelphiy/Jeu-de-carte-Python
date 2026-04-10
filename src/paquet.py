@@ -1,3 +1,4 @@
+import random
 from src.carte import Carte
 
 class Paquet:
@@ -7,3 +8,8 @@ class Paquet:
             for valeur in Carte.VALEURS
             for couleur in Carte.COULEURS
         ]
+        
+    def melanger(self):
+        random.shuffle(self.cartes)
+        
+    
