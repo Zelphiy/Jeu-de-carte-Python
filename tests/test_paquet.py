@@ -9,3 +9,9 @@ def test_melanger_paquet():
     cartes_avant = paquet.cartes.copy()
     paquet.melanger()
     assert paquet.cartes != cartes_avant
+    
+def test_couper_paquet():
+    paquet = Paquet()
+    cartes_avant = paquet.cartes.copy()
+    paquet.couper()
+    assert paquet.cartes != cartes_avant

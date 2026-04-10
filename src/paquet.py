@@ -12,4 +12,6 @@ class Paquet:
     def melanger(self):
         random.shuffle(self.cartes)
         
-    
+    def couper(self):
+        index = random.randint(1, len(self.cartes) - 1)
+        self.cartes = self.cartes[index:] + self.cartes[:index]
