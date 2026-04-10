@@ -15,3 +15,8 @@ class Blackjack:
             
     def joueur_pioche(self):
         self.joueur.ajouter_carte(self.paquet.piocher())
+        
+    def croupier_pioche(self):
+        while self.croupier.score() < 17:
+            self.croupier.ajouter_carte(self.paquet.piocher())
+    

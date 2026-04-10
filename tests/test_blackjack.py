@@ -19,3 +19,10 @@ def test_joueur_pioche():
     jeu.joueur_pioche()
     assert len(jeu.joueur.main) == 3
     assert len(jeu.paquet.cartes) == 47
+    
+def test_croupier_pioche():
+    jeu = Blackjack()
+    jeu.distribuer_cartes()
+    jeu.croupier_pioche()
+    assert len(jeu.croupier.main) == 3
+    assert len(jeu.paquet.cartes) == 47
