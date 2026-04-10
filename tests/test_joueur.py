@@ -26,3 +26,10 @@ def test_score_avec_as():
     joueur.ajouter_carte(Carte(1, "Pique"))
     joueur.ajouter_carte(Carte(10, "Coeur"))
     assert joueur.score() == 21
+    
+def test_est_busted():
+    joueur = Joueur("Toto")
+    joueur.ajouter_carte(Carte(10, "Pique"))
+    joueur.ajouter_carte(Carte(10, "Coeur"))
+    joueur.ajouter_carte(Carte(2, "Trèfle"))
+    assert joueur.est_busted() == True

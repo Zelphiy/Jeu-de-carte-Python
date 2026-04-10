@@ -26,3 +26,6 @@ class Joueur:
             as_count -= 1
             
         return total
+    
+    def est_busted(self):
+        return self.score() > 21
