@@ -26,7 +26,7 @@ def test_croupier_pioche():
     jeu.distribuer_cartes()
     jeu.croupier_pioche()
     assert len(jeu.croupier.main) >= 2
-    assert len(jeu.paquet.cartes) >= 48
+    assert len(jeu.paquet.cartes) <= 48
     
 def test_resultat():
     jeu = Blackjack()
