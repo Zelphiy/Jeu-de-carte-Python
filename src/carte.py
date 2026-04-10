@@ -28,4 +28,3 @@ class Carte:
         if couleur not in self.COULEURS:
             raise ValueError(f"Couleur invalide")
         self._couleur = couleur
-        
