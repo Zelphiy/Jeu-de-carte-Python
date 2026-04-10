@@ -15,3 +15,8 @@ class Paquet:
     def couper(self):
         index = random.randint(1, len(self.cartes) - 1)
         self.cartes = self.cartes[index:] + self.cartes[:index]
+        
+    def piocher(self):
+        if not self.cartes:
+            return None
+        return self.cartes.pop(0)

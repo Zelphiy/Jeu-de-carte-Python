@@ -15,3 +15,9 @@ def test_couper_paquet():
     cartes_avant = paquet.cartes.copy()
     paquet.couper()
     assert paquet.cartes != cartes_avant
+    
+def test_piocher_paquet():
+    paquet = Paquet()
+    carte = paquet.piocher()
+    assert carte is not None
+    assert len(paquet.cartes) == 51
