@@ -14,3 +14,15 @@ def test_ajouter_carte():
     joueur = Joueur("Toto")
     joueur.ajouter_carte(Carte("Valet", "Pique"))
     assert len(joueur.main) == 1
+    
+def test_score_sans_as():
+    joueur = Joueur("Toto")
+    joueur.ajouter_carte(Carte(6, "Pique"))
+    joueur.ajouter_carte(Carte(7, "Coeur"))
+    assert joueur.score() == 13
+
+def test_score_avec_as():
+    joueur = Joueur("Toto")
+    joueur.ajouter_carte(Carte(1, "Pique"))
+    joueur.ajouter_carte(Carte(10, "Coeur"))
+    assert joueur.score() == 21
