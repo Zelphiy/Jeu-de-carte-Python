@@ -13,3 +13,10 @@ def test_valeur_invalide():
 def test_couleur_invalide():
     with pytest.raises(ValueError):
         Carte(10, "Rouge")
+        
+def test_points():
+    carte = Carte(10, "Coeur")
+    assert carte.points() == 10
+    
+    carte = Carte("Valet", "Pique")
+    assert carte.points() == 11

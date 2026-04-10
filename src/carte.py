@@ -28,3 +28,14 @@ class Carte:
         if couleur not in self.COULEURS:
             raise ValueError(f"Couleur invalide")
         self._couleur = couleur
+
+    def points(self):
+        if isinstance(self.valeur, int):
+            return self.valeur
+        
+        mappign = {
+            "Valet": 11,
+            "Dame": 12,
+            "Roi": 13
+        }
+        return mappign[self.valeur]
