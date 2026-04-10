@@ -20,3 +20,10 @@ def test_points():
     
     carte = Carte("Valet", "Pique")
     assert carte.points() == 11
+ 
+def test_repr():
+    carte = Carte(10, "Coeur")
+    assert repr(carte) == "Carte 10 de Coeur"
+    
+    carte = Carte("Valet", "Coeur")
+    assert repr(carte) == "Carte Valet de Coeur"

@@ -39,3 +39,6 @@ class Carte:
             "Roi": 13
         }
         return mappign[self.valeur]
+
+    def __repr__(self):
+        return f"Carte {self.valeur} de {self.couleur}"
