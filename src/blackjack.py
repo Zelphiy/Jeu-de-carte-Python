@@ -12,3 +12,6 @@ class Blackjack:
         for _ in range(2):
             self.joueur.ajouter_carte(self.paquet.piocher())
             self.croupier.ajouter_carte(self.paquet.piocher())
+            
+    def joueur_pioche(self):
+        self.joueur.ajouter_carte(self.paquet.piocher())

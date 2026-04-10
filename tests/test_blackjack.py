@@ -12,3 +12,10 @@ def test_distribuer_cartes():
     assert len(jeu.joueur.main) == 2
     assert len(jeu.croupier.main) == 2
     assert len(jeu.paquet.cartes) == 48 
+
+def test_joueur_pioche():
+    jeu = Blackjack()
+    jeu.distribuer_cartes()
+    jeu.joueur_pioche()
+    assert len(jeu.joueur.main) == 3
+    assert len(jeu.paquet.cartes) == 47
