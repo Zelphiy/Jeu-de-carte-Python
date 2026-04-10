@@ -20,3 +20,16 @@ class Blackjack:
         while self.croupier.score() < 17:
             self.croupier.ajouter_carte(self.paquet.piocher())
     
+    def resultat(self):
+        if self.joueur.est_busted():
+            return "Croupier gagne"
+        elif self.croupier.est_busted():
+            return "Joueur gagne"
+        
+        elif self.joueur.score() > self.croupier.score():
+            return "Joueur gagne"
+        elif self.joueur.score() < self.croupier.score():
+            return "Croupier gagne"
+        
+        else:
+            return "Égalité"
