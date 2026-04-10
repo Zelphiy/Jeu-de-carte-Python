@@ -7,3 +7,8 @@ class Blackjack:
         self.paquet.melanger()
         self.joueur = Joueur("Joueur")
         self.croupier = Joueur("Croupier")
+        
+    def distribuer_cartes(self):
+        for _ in range(2):
+            self.joueur.ajouter_carte(self.paquet.piocher())
+            self.croupier.ajouter_carte(self.paquet.piocher())

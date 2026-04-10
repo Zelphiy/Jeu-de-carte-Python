@@ -6,3 +6,9 @@ def test_initialisation_blackjack():
     assert jeu.croupier is not None
     assert len(jeu.paquet.cartes) == 52
     
+def test_distribuer_cartes():
+    jeu = Blackjack()
+    jeu.distribuer_cartes()
+    assert len(jeu.joueur.main) == 2
+    assert len(jeu.croupier.main) == 2
+    assert len(jeu.paquet.cartes) == 48 
